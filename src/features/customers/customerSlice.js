@@ -6,7 +6,7 @@ const initialStateCustomer = {
 };
 
 // Reducers for customer module
-function customerReducer(state = initialStateCustomer, action) {
+export default function customerReducer(state = initialStateCustomer, action) {
   switch (action.type) {
     case 'customer/createCustomer':
       return {
@@ -26,7 +26,7 @@ function customerReducer(state = initialStateCustomer, action) {
 }
 
 // Action creators for customer module
-function createCustomer(fullName, nationalID) {
+export function createCustomer(fullName, nationalID) {
   return {
     type: 'customer/createCustomer',
     payload: {
@@ -37,11 +37,9 @@ function createCustomer(fullName, nationalID) {
   };
 }
 
-function updateName(fullName) {
+export function updateName(fullName) {
   return {
     type: 'customer/updateName',
     payload: fullName,
   }
 }
-
-export { customerReducer, createCustomer, updateName };

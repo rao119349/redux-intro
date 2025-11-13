@@ -36,6 +36,7 @@ const customerSlice = createSlice({
 export const { createCustomer, updateName } = customerSlice.actions;
 export default customerSlice.reducer;
 
+
 /*
 // Plain Redux implementation
 // Reducers for customer module
